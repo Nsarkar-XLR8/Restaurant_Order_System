@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order</title>
+    <link rel="stylesheet" href="../CSS/signup.css">
+
+   <style>
+     body {
+            background-color: #E1D4C1;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+   
+    .dark {
+            background-color: #222;
+            color: #e6e6e6;
+        }
+   </style>
+</head>
+<body>
+    <header class="headerPart">
+        <nav class="navBar">
+            <ul class="navList">
+                <div class="groupOne">
+                    <img src="../Images/Logo.jpg" alt="Restaurant Logo" width="50px" height="50px">
+                    <li><a href="index.html" aria-label="Home">Home</a></li>
+                </div>
+                <div class="groupTwo">
+                    <li><a href="login.html" aria-label="Login">Login</a></li>
+                    <li><a href="#" aria-label="Sign Up">Sign Up</a></li>
+                    <li><a href="aboutUs.html" aria-label="About Us">About Us</a></li>
+                    <li><button type="button" onclick="changeTheme()">Change Theme</button></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainPart">
+        <div class="signup-container">
+            <h1>Create Your Account</h1>
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="signup-btn">Sign Up</button>
+                <p class="signup-link">Have an account? <a href="login.html">Login here</a></p>
+            </form>
+        </div>
+    </main>
+
+
+
+
+    <footer class="footerClass">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h3>About ROS</h3>
+            <p>&copy; 2025 Restaurant Order. <br> All Rights Reserved. Your go-to platform for seamless restaurant orders,<br> personalized dining experiences, and a community of food enthusiasts. Explore,<br> connect, and enjoy the best culinary moments with us. <br> Follow us on social media for updates, exclusive deals, and exciting content!</p>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contact Me</h3>
+            <ul>
+              <li>Email: Nsarkar6251@gmail.com</li>
+              <li>Phone: +8801626-644761</li>
+              <li>Address: Badda, Dhaka, Bangladesh</li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Connect with Us</h3>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/nayem.sarkar.752123"><img src="./Images/Facebook.jpg" alt="Facebook" height="50px" width="50px"/></a>
+              <a href="https://github.com/nsarkar-xlr8"><img src="./Images/Twitter.jpg" alt="Github" height="50px" width="50px"/></a>
+              <a href="https://www.instagram.com/connate__sarcar/"><img src="./Images/Instagram.jpg" alt="Instagram" height="50px" width="50px"/></a>
+              <a href="https://www.linkedin.com/in/nayem-sarkar-8a84412a8/"><img src="./Images/LinkedIn.jpg" alt="LinkedIn" height="50px" width="50px"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Restaurant Order. <br> All Rights Reserved. Your go-to platform for seamless restaurant orders,<br> personalized dining experiences, and a community of food enthusiasts. Explore,<br> connect, and enjoy the best culinary moments with us. <br> Follow us on social media for updates, exclusive deals, and exciting content!</p>
+        </div>
+      </footer>
+
+    <script src="../Javascript/signup.js"></script>
+    
+</body>
+</html>
