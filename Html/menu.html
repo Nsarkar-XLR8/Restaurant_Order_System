@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Order</title>
     <link rel="stylesheet" href="../CSS/menu.css">
+
+    <style>
+        body {
+            background-color: #E1D4C1;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .dark {
+            background-color: #222;
+            color: #e6e6e6;
+        }
+    </style>
+    </style>
 </head>
 <body>
 
@@ -19,6 +33,7 @@
                     <li><a href="login.html" aria-label="Login">Login</a></li>
                     <li><a href="signup.html" aria-label="Sign Up">Sign Up</a></li>
                     <li><a href="aboutUs.html" aria-label="About Us">About Us</a></li>
+                    <li><button type="button" onclick="handleClick()">Change Theme</button></li>
                   
                 </div>
             </ul>
@@ -32,7 +47,7 @@
                 <h2>Grilled Chicken</h2>
                 <p>Succulent grilled chicken served with veggies.</p>
                 <p class="price">$12.99</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart" onclick="addToCart('Grilled Chicken', 12.99)">Add to Cart</button>
             </div>
 
             <div class="menu-item">
@@ -40,7 +55,7 @@
                 <h2>Spaghetti Bolognese</h2>
                 <p>Classic Italian spaghetti with a rich meat sauce.</p>
                 <p class="price">$9.99</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart" onclick="addToCart('Spaghetti Bolognese',9.99)">Add to Cart</button>
             </div>
 
             <div class="menu-item">
@@ -48,34 +63,35 @@
                 <h2>Vegetable Salad</h2>
                 <p>Fresh garden salad with your choice of dressing.</p>
                 <p class="price">$7.99</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart" onclick="addToCart('Vegetable Salad',7.99)">Add to Cart</button>
             </div>
         </section>
 
         <section class="cart">
             <h2>Your Cart</h2>
-            <ul id="cart-items">
+            <ul id="cart-items" class="cart-list">
                 <li>No items in the cart.</li>
             </ul>
-            <p class="total">Total: $0.00</p>
+            <p id="total-price" class="total-price">Total: $0.00</p>
+
             <button class="order-btn">Place Order</button>
         </section>
 
         <section class="payment">
             <h2>Payment</h2>
-            <form>
+            <form id="paymentForm">
                 <label for="card-name">Name on Card:</label>
                 <input type="text" id="card-name" placeholder="John Doe" required>
-
+        
                 <label for="card-number">Card Number:</label>
-                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
-
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required maxlength="16" pattern="\d{16}">
+        
                 <label for="expiry">Expiry Date:</label>
                 <input type="month" id="expiry" required>
-
+        
                 <label for="cvv">CVV:</label>
-                <input type="password" id="cvv" placeholder="123" required>
-
+                <input type="password" id="cvv" placeholder="123" required maxlength="3" pattern="\d{3}">
+        
                 <button type="submit" class="pay-btn">Pay Now</button>
             </form>
         </section>
@@ -102,13 +118,13 @@
             <div class="footer-social">
                 <h3>Connect with Us</h3>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/nayem.sarkar.752123"><img src="./Images/Facebook.jpg"
+                    <a href="https://www.facebook.com/nayem.sarkar.752123"><img src="../Images/Facebook.jpg"
                             alt="Facebook" height="50px" width="50px" /></a>
-                    <a href="https://github.com/nsarkar-xlr8"><img src="./Images/Twitter.jpg" alt="Github" height="50px"
+                    <a href="https://github.com/nsarkar-xlr8"><img src="../Images/Github.jpg" alt="Github" height="50px"
                             width="50px" /></a>
-                    <a href="https://www.instagram.com/connate__sarcar/"><img src="./Images/Instagram.jpg"
+                    <a href="https://www.instagram.com/connate__sarcar/"><img src="../Images/Instagram.jpg"
                             alt="Instagram" height="50px" width="50px" /></a>
-                    <a href="https://www.linkedin.com/in/nayem-sarkar-8a84412a8/"><img src="./Images/LinkedIn.jpg"
+                    <a href="https://www.linkedin.com/in/nayem-sarkar-8a84412a8/"><img src="../Images/LinkedIn.jpg"
                             alt="LinkedIn" height="50px" width="50px" /></a>
                 </div>
             </div>
@@ -123,6 +139,6 @@
     </footer>
 
 
-    
+    <script src="../Javascript/menu.js"></script>
 </body>
 </html>
