@@ -95,4 +95,5 @@ app.post('/api/payment', async (req, res) => {
 });
 
 // Start Server
+export default app;
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));
